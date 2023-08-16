@@ -1,0 +1,26 @@
+package array;
+import java.util.HashSet;
+
+import java.util.HashSet;
+
+public class commonelementsintwoar3 {
+
+	public static void main(String[] args) {
+		int[] array1= {4,3,7,9,2,4};
+		int[] array2= {5,1,4,8,3,5};
+		HashSet<Integer> hs1=new HashSet<>();
+		HashSet<Integer> hs2=new HashSet<>();
+		for(int no:array1) {
+			hs1.add(no);
+		}
+		for(int no:array2) {
+			hs2.add(no);
+		}
+		for(int no:hs2) {
+		boolean b=hs1.add(no);
+		if(b==false) {
+			System.out.println(+no);
+		}
+		}
+	}
+}
